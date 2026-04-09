@@ -1632,6 +1632,9 @@ h1, h2, h3 {
   .badge-top  { left: 10px; top: 16px; }
   .badge-bottom { right: 10px; bottom: 16px; }
   .code-card { display: none; }
+  .hero-browser { display: none; }
+  .hero-frame { border-radius: 20px; overflow: hidden; }
+  .hero-visual { padding-bottom: 0; }
 
   .marquee-inner span { font-size: 0.76rem; }
 
