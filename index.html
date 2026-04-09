@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TessMaedia — Building Websites That Drive Results</title>
+    <meta name="description" content="TessMaedia bouwt premium websites, software en digitale ervaringen. Powered by Dominique Bollen, Lanaken België." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ═══ LOADER ═══ -->
+    <div class="loader" id="loader">
+      <div class="loader-terminal">
+        <div class="loader-term-bar">
+          <span class="cc-dot cc-dot-r"></span>
+          <span class="cc-dot cc-dot-y"></span>
+          <span class="cc-dot cc-dot-g"></span>
+          <span class="loader-term-title">tessmaedia — build</span>
+        </div>
+        <div class="loader-term-body">
+          <div id="loaderLines"></div>
+          <span class="loader-term-cursor"></span>
+        </div>
+      </div>
+      <div class="loader-progress-wrap">
+        <div class="loader-progress-fill" id="loaderProgressFill"></div>
+      </div>
+    </div>
+
+    <!-- ═══ CURSOR ═══ -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- ═══ NAV ═══ -->
+    <header class="nav" id="nav">
+      <a class="nav-brand" href="#top">
+        <img src="public/images/Logo simpel 2.png" alt="TessMaedia logo" />
+        <span>TessMaedia</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#prijzen">Prijzen</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Start een project</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu openen">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <!-- ═══ MOBILE MENU ═══ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#prijzen">Prijzen</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="mobile-footer">TessMaedia · Lanaken, België</p>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="top">
+      <div class="hero-noise"></div>
+      <div class="hero-glow"></div>
+
+      <div class="hero-inner">
+        <!-- Left column -->
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Powered by Dominique Bollen · Lanaken, België
+          </p>
+
+          <h1 class="hero-title">
+            <span class="hero-line">Building</span>
+            <span class="hero-line hero-line-accent">websites</span>
+            <span class="hero-line">that drive</span>
+            <span class="hero-line">results.</span>
+          </h1>
+
+          <p class="hero-desc">
+            TessMaedia ontwerpt en bouwt premium digitale ervaringen —
+            websites, software en games die uw merk op een hoger niveau tillen.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-mag>
+              <span>Start een project</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#work" class="btn btn-ghost" data-mag>Bekijk ons werk</a>
+          </div>
+
+          <ul class="hero-pills" aria-hidden="true">
+            <li>Web Design</li>
+            <li>Development</li>
+            <li>SEO</li>
+            <li>Lanaken, BE</li>
+          </ul>
+        </div>
+
+        <!-- Right column -->
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img
+              src="public/images/TOP FOTO 1.png"
+              alt="TessMaedia — developer at work"
+              class="hero-img"
+            />
+            <div class="hero-frame-overlay"></div>
+          </div>
+
+          <!-- Floating browser mockup -->
+          <div class="hero-browser" id="heroBrowser">
+            <div class="browser-bar">
+              <div class="browser-left">
+                <div class="browser-dots">
+                  <span class="bd-red"></span>
+                  <span class="bd-yellow"></span>
+                  <span class="bd-green"></span>
+                </div>
+                <span class="browser-nav-arrow">‹</span>
+                <span class="browser-nav-arrow browser-nav-fwd">›</span>
+              </div>
+              <div class="browser-address">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C9.24 2 7 4.24 7 7v2H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-9a2 2 0 00-2-2h-2V7c0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3v2H9V7c0-1.66 1.34-3 3-3zm0 9a2 2 0 110 4 2 2 0 010-4z" fill="currentColor"/>
+                </svg>
+                <span>tessmaedia.com</span>
+              </div>
+              <div class="browser-right">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2l-4 4h3v9h2V6h3l-4-4zm-7 15v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="browser-screen">
+              <img src="public/images/Banner 1.png" alt="TessMaedia Website Design" />
+            </div>
+          </div>
+
+          <!-- Floating code card -->
+          <div class="code-card" id="codeCard">
+            <div class="cc-header">
+              <span class="cc-dot cc-dot-r"></span>
+              <span class="cc-dot cc-dot-y"></span>
+              <span class="cc-dot cc-dot-g"></span>
+              <span class="cc-filename">style.css</span>
+            </div>
+            <pre class="cc-body"><code id="codeTyping"></code><span class="cc-cursor"></span></pre>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-track"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="services">
+      <div class="services-wrap">
+
+        <!-- Sticky visual -->
+        <div class="services-sticky">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Wat we doen</p>
+          <h2 class="services-heading">Onze<br />expertise</h2>
+          <div class="services-vis" id="svcVis">
+            <div class="svc-img svc-img-active" data-svc="0">
+              <img src="public/images/Banner 1.png" alt="Website Design" />
+            </div>
+            <div class="svc-img" data-svc="1">
+              <div class="svc-ph svc-ph-2">
+                <span class="svc-ph-num">02</span>
+                <span class="svc-ph-icon">💻</span>
+                <span class="svc-ph-label">Development</span>
+              </div>
+            </div>
+            <div class="svc-img" data-svc="2">
+              <div class="svc-ph svc-ph-3">
+                <span class="svc-ph-num">03</span>
+                <span class="svc-ph-icon">🚀</span>
+                <span class="svc-ph-label">Launch & SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service list -->
+        <div class="services-list">
+          <article class="svc-item" data-svc="0">
+            <span class="svc-num">01</span>
+            <div class="svc-body">
+              <h3>Web Design</h3>
+              <p>Visuele concepten en UI/UX ontwerp dat uw merk perfect vertaalt naar het scherm. Premium art direction, verfijnde typografie en interfaces die luxe communiceren.</p>
+              <ul class="svc-tags">
+                <li>UI/UX Design</li><li>Branding</li><li>Prototyping</li><li>Animaties</li>
+              </ul>
+            </div>
+            <span class="svc-arrow">→</span>
+          </article>
+
+          <article class="svc-item" data-svc="1">
+            <span class="svc-num">02</span>
+            <div class="svc-body">
+              <h3>Web Development</h3>
+              <p>Pixel-perfect implementatie met schone, schaalbare code. Van eenvoudige landingspagina tot complexe webapplicatie — altijd snel, veilig en klaar voor groei.</p>
+              <ul class="svc-tags">
+                <li>Frontend</li><li>Backend</li><li>CMS</li><li>E-commerce</li>
+              </ul>
+            </div>
+            <span class="svc-arrow">→</span>
+          </article>
+
+          <article class="svc-item" data-svc="2">
+            <span class="svc-num">03</span>
+            <div class="svc-body">
+              <h3>Launch & SEO</h3>
+              <p>Zorgvuldige lancering, technische SEO-optimalisatie en doorlopende support. Uw website performt van dag één en blijft groeien in zichtbaarheid.</p>
+              <ul class="svc-tags">
+                <li>SEO</li><li>Performance</li><li>Hosting</li><li>Onderhoud</li>
+              </ul>
+            </div>
+            <span class="svc-arrow">→</span>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ WORK ═══ -->
+    <section class="work" id="work">
+      <div class="work-header">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Portfolio</p>
+        <h2>Geselecteerd werk</h2>
+        <p class="work-sub">4 projecten momenteel in ontwikkeling — binnenkort hier te zien.</p>
+      </div>
+
+      <div class="work-drag" id="workDrag">
+        <div class="work-track" id="workTrack">
+
+          <article class="work-card work-card-soon">
+            <div class="wc-image">
+              <div class="wc-soon-bg wc-soon-1">
+                <span class="wc-soon-num">01</span>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+              </div>
+            </div>
+            <div class="wc-info">
+              <span class="wc-cat">Website</span>
+              <div class="wc-redact wc-redact-title"></div>
+              <div class="wc-redact wc-redact-body"></div>
+              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+            </div>
+          </article>
+
+          <article class="work-card work-card-soon">
+            <div class="wc-image">
+              <div class="wc-soon-bg wc-soon-2">
+                <span class="wc-soon-num">02</span>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+              </div>
+            </div>
+            <div class="wc-info">
+              <span class="wc-cat">Website</span>
+              <div class="wc-redact wc-redact-title"></div>
+              <div class="wc-redact wc-redact-body"></div>
+              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+            </div>
+          </article>
+
+          <article class="work-card work-card-soon">
+            <div class="wc-image">
+              <div class="wc-soon-bg wc-soon-3">
+                <span class="wc-soon-num">03</span>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+              </div>
+            </div>
+            <div class="wc-info">
+              <span class="wc-cat">Website</span>
+              <div class="wc-redact wc-redact-title"></div>
+              <div class="wc-redact wc-redact-body"></div>
+              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+            </div>
+          </article>
+
+          <article class="work-card work-card-soon">
+            <div class="wc-image">
+              <div class="wc-soon-bg wc-soon-4">
+                <span class="wc-soon-num">04</span>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+              </div>
+            </div>
+            <div class="wc-info">
+              <span class="wc-cat">Website</span>
+              <div class="wc-redact wc-redact-title"></div>
+              <div class="wc-redact wc-redact-body"></div>
+              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+            </div>
+          </article>
+
+          <article class="work-card work-cta-card">
+            <div class="work-cta-inner">
+              <span class="work-cta-star">✦</span>
+              <h3>Jouw project als eerste?</h3>
+              <a href="#contact" class="btn btn-primary">Neem contact op</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="work-progress-wrap">
+        <div class="work-progress" id="workProgress"></div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="about" id="about">
+      <div class="about-inner">
+
+        <div class="about-visual">
+          <div class="about-photo-frame">
+            <img src="public/images/whatccustomerscanexpect.png" alt="Wat klanten van TessMaedia kunnen verwachten" />
+          </div>
+          <div class="about-glow"></div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Over TessMaedia</p>
+          <h2>Gedreven door<br />detail. Gefocust<br />op impact.</h2>
+          <p class="about-lead">TessMaedia is het digitale bureau van <strong>Dominique Bollen</strong> — een ontwikkelaar en designer uit Lanaken, België die gelooft dat elk digitaal product de kans heeft om écht indruk te maken.</p>
+          <p class="about-body">Van kleine lokale ondernemingen tot ambitieuze startups: TessMaedia bouwt producten die niet alleen mooi zijn, maar ook technisch sterk, strategisch doordacht en klaar om te groeien.</p>
+
+          <!-- Lighthouse scores -->
+          <div class="lh-scores" id="lhScores">
+            <div class="lh-score">
+              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <span class="lh-num" data-target="100">0</span>
+              <span class="lh-label">Performance</span>
+            </div>
+            <div class="lh-score">
+              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <span class="lh-num" data-target="100">0</span>
+              <span class="lh-label">SEO</span>
+            </div>
+            <div class="lh-score">
+              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="98"/></svg>
+              <span class="lh-num" data-target="98">0</span>
+              <span class="lh-label">Accessibility</span>
+            </div>
+            <div class="lh-score">
+              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <span class="lh-num" data-target="100">0</span>
+              <span class="lh-label">Best Practices</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-outline" data-mag>Samenwerken? →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ LAUNCH ═══ -->
+    <section class="launch-section">
+      <div class="launch-inner">
+
+        <!-- Left: copy -->
+        <div class="launch-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Hoe we werken</p>
+          <h2>Van idee tot<br />impact.</h2>
+          <div class="launch-steps">
+            <div class="ls-item"><span class="ls-n">01</span><span class="ls-label">Intake & Strategie</span></div>
+            <div class="ls-line"></div>
+            <div class="ls-item"><span class="ls-n">02</span><span class="ls-label">Design & Prototype</span></div>
+            <div class="ls-line"></div>
+            <div class="ls-item"><span class="ls-n">03</span><span class="ls-label">Development</span></div>
+            <div class="ls-line"></div>
+            <div class="ls-item ls-launch"><span class="ls-n">04</span><span class="ls-label">Launch!</span></div>
+          </div>
+        </div>
+
+        <!-- Right: device animation -->
+        <div class="launch-stage" id="launchStage">
+
+          <!-- Phone -->
+          <div class="launch-phone" id="launchPhone">
+            <div class="lp-side-btn lp-btn-vol"></div>
+            <div class="lp-side-btn lp-btn-pwr"></div>
+            <div class="lp-notch"></div>
+            <div class="lp-screen">
+              <!-- Live badge — appears after launch -->
+              <div class="launch-live" id="launchLive">
+                <span class="live-dot"></span>
+                <span>LIVE</span>
+              </div>
+              <div class="lp-statusbar">
+                <span>9:41</span>
+                <span>●●●</span>
+              </div>
+              <div class="lp-nav-bar">
+                <div class="lp-logo-dot"></div>
+                <div class="lp-nav-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="lp-hero-block">
+                <div class="lp-text lp-t1"></div>
+                <div class="lp-text lp-t2"></div>
+                <div class="lp-text lp-t3"></div>
+                <div class="lp-cta-btn"></div>
+              </div>
+              <div class="lp-cards">
+                <div class="lp-card"></div>
+                <div class="lp-card"></div>
+              </div>
+            </div>
+            <div class="lp-home-bar"></div>
+          </div>
+
+          <!-- Flames -->
+          <div class="launch-flames" id="launchFlames">
+            <div class="flame flame-c"></div>
+            <div class="flame flame-l"></div>
+            <div class="flame flame-r"></div>
+          </div>
+
+          <!-- Speed trails -->
+          <div class="launch-trails" id="launchTrails">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+
+          <!-- Glow under phone -->
+          <div class="launch-glow-base"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ PRICING ═══ -->
+    <section class="pricing" id="prijzen">
+      <div class="pricing-inner">
+        <div class="pricing-header">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Transparante prijzen</p>
+          <h2>Kies je pakket</h2>
+          <p class="pricing-sub">Geen verrassingen. Duidelijke afspraken. Altijd op maat te bespreken.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Starter -->
+          <div class="price-card">
+            <div class="pc-top">
+              <span class="pc-label">Starter</span>
+              <p class="pc-desc">Perfect voor zelfstandigen die snel online willen met een mooie, professionele aanwezigheid.</p>
+              <div class="pc-price"><span class="pc-num">€800</span><span class="pc-from">excl. BTW</span></div>
+            </div>
+            <ul class="pc-features">
+              <li><span class="pc-check">✓</span>One-pager website op maat</li>
+              <li><span class="pc-check">✓</span>Mobielvriendelijk design</li>
+              <li><span class="pc-check">✓</span>1 feedbackronde</li>
+              <li><span class="pc-check">✓</span>WhatsApp / contact knop</li>
+              <li><span class="pc-check">✓</span>Domein & hosting setup</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+          </div>
+
+          <!-- Standaard -->
+          <div class="price-card">
+            <div class="pc-top">
+              <span class="pc-label">Standaard</span>
+              <p class="pc-desc">Voor bedrijven die een volwaardige website willen met meerdere pagina's en meer functionaliteiten.</p>
+              <div class="pc-price"><span class="pc-num">€1.200</span><span class="pc-from">excl. BTW</span></div>
+            </div>
+            <ul class="pc-features">
+              <li><span class="pc-check">✓</span>Tot 6 pagina's op maat</li>
+              <li><span class="pc-check">✓</span>Animaties & interactiviteit</li>
+              <li><span class="pc-check">✓</span>2 feedbackrondes</li>
+              <li><span class="pc-check">✓</span>Fotogalerij of portfolio</li>
+              <li><span class="pc-check">✓</span>SEO-basisoptimalisatie</li>
+              <li><span class="pc-check">✓</span>Domein & hosting setup</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+          </div>
+
+          <!-- Maatwerk -->
+          <div class="price-card">
+            <div class="pc-top">
+              <span class="pc-label">Maatwerk</span>
+              <p class="pc-desc">Voor complexe projecten, webshops of platformen met specifieke wensen en functionaliteiten.</p>
+              <div class="pc-price pc-price-aanvraag"><span class="pc-num pc-num-sm">Op aanvraag</span></div>
+            </div>
+            <ul class="pc-features">
+              <li><span class="pc-check">✓</span>Volledig op maat gebouwd</li>
+              <li><span class="pc-check">✓</span>Webshop / boekingssysteem</li>
+              <li><span class="pc-check">✓</span>Onbeperkte feedbackrondes</li>
+              <li><span class="pc-check">✓</span>Integraties (CRM, API's…)</li>
+              <li><span class="pc-check">✓</span>Prioriteitssupport</li>
+              <li><span class="pc-check">✓</span>Maandelijks onderhoud mogelijk</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+          </div>
+
+        </div>
+        <p class="pricing-note">Alle prijzen excl. BTW. Hosting & domein apart. Op zoek naar iets specifieks? <a href="#contact">Stuur een bericht.</a></p>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT CTA ═══ -->
+    <section class="cta" id="contact">
+      <div class="cta-glow"></div>
+      <div class="cta-inner">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Klaar om te starten?</p>
+        <h2 class="cta-title">
+          <span>Laten we iets</span>
+          <em>bijzonders</em>
+          <span id="scrambleBouwen">bouwen.</span>
+        </h2>
+        <p class="cta-sub">Stuur een berichtje — we reageren binnen 24 uur.</p>
+        <a href="mailto:hello@tessmaedia.com" class="btn btn-primary btn-xl" data-mag>
+          <span>hello@tessmaedia.com</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p class="cta-location">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="currentColor"/></svg>
+          Lanaken, België
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHATSAPP ═══ -->
+    <a class="wa-btn" href="https://wa.me/32469119170" target="_blank" rel="noopener" aria-label="WhatsApp TessMaedia">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.116 1.528 5.845L.057 23.882a.5.5 0 00.61.61l6.037-1.47A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.866 9.866 0 01-5.032-1.373l-.36-.214-3.733.909.934-3.627-.235-.374A9.862 9.862 0 012.1 12C2.1 6.533 6.533 2.1 12 2.1S21.9 6.533 21.9 12 17.467 21.9 12 21.9z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="#top">
+          <img src="public/images/Logo simpel 2.png" alt="TessMaedia" />
+          <span>TessMaedia</span>
+        </a>
+        <nav class="footer-nav">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-copy">© 2025 TessMaedia · Powered by Dominique Bollen</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

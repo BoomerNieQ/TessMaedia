@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TessMaedia — Intro Reel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Manrope:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #080808;
+      --text:         #f0f0f0;
+      --muted:        rgba(240,240,240,0.45);
+      --border:       rgba(255,255,255,0.08);
+      --border-hi:    rgba(255,255,255,0.18);
+      --purple:       #8A00FF;
+      --purple-light: #C478FF;
+    }
+
+    html, body {
+      width: 100vw; height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(138,0,255,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Perfect center — never moves ── */
+    .stage {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    /* ── Logo ── */
+    .reel-logo {
+      display: flex; align-items: center; gap: 16px;
+      width: min(840px, 92vw);
+      opacity: 0; transition: opacity 0.7s ease;
+      flex-shrink: 0;
+    }
+    .reel-logo.show { opacity: 1; }
+    .reel-logo img { width: 58px; height: 58px; border-radius: 16px; object-fit: cover; }
+    .reel-logo span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 2rem;
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+
+    /* ── Terminal — full height from the start ── */
+    .terminal {
+      width: min(840px, 92vw);
+      background: rgba(14,14,16,0.97);
+      border: 1px solid var(--border-hi);
+      border-radius: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 48px 120px rgba(0,0,0,0.85), 0 0 100px rgba(138,0,255,0.18);
+    }
+    .term-bar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 16px 24px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 14px; height: 14px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #febc2e; }
+    .dot-g { background: #28c840; }
+    .term-title {
+      margin-left: 12px; font-size: 0.96rem;
+      font-family: 'Courier New', monospace;
+      color: var(--muted); letter-spacing: 0.05em;
+    }
+    .term-body {
+      padding: 26px 32px 30px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.05rem; line-height: 2.1;
+    }
+
+    /* All lines pre-rendered, invisible — revealed one by one */
+    .line {
+      display: block;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      white-space: pre;
+    }
+    .line.show { opacity: 1; transform: translateY(0); }
+
+    /* Cursor only visible on active line */
+    .cursor {
+      display: inline-block;
+      width: 10px; height: 18px;
+      background: var(--purple-light);
+      vertical-align: middle; margin-left: 2px;
+      opacity: 0;
+      animation: blink 0.9s step-end infinite;
+    }
+    .cursor.show { opacity: 1; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      width: min(840px, 92vw); height: 3px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px; overflow: hidden; flex-shrink: 0;
+    }
+    .progress-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--purple), var(--purple-light));
+      border-radius: 2px;
+      transition: width 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ── Success flash ── */
+    .success-flash {
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(138,0,255,0.22) 0%, transparent 70%);
+      pointer-events: none; opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .success-flash.show { opacity: 1; }
+
+    .ll-prompt { color: rgba(255,255,255,0.28); }
+    .ll-ready  { color: #fff; font-weight: 700; }
+    .ll-arrow  { color: var(--purple-light); }
+    .ll-key    { color: #93c5fd; }
+    .ll-val    { color: #6ee7b7; }
+    .ll-check  { color: #6ee7b7; }
+  </style>
+</head>
+<body>
+
+<div class="success-flash" id="flash"></div>
+
+<div class="stage">
+  <div class="reel-logo" id="logo">
+    <img src="public/images/Logo simpel 2.png" alt="TessMaedia" />
+    <span>TessMaedia</span>
+  </div>
+
+  <div class="terminal">
+    <div class="term-bar">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="term-title">tessmaedia — build</span>
+    </div>
+    <div class="term-body" id="termBody">
+      <!-- Lines pre-rendered by JS before animation starts -->
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-fill" id="prog"></div>
+  </div>
+</div>
+
+<script>
+  const STEPS = [
+    { html: '<span class="ll-prompt">$</span> <span class="ll-ready">tessmaedia.com — building...</span>',                                               progress: 8  },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">reading design files</span>                    <span class="ll-check">✓</span>',        progress: 20 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">design</span>           <span class="ll-val">pixel-perfect</span>    <span class="ll-check">✓</span>', progress: 33 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">compiling</span>        <span class="ll-val">styles.css</span>       <span class="ll-check">✓</span>', progress: 46 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">development</span>      <span class="ll-val">premium builds</span>   <span class="ll-check">✓</span>', progress: 58 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">optimizing assets</span>                       <span class="ll-check">✓</span>',        progress: 70 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">performance</span>      <span class="ll-val">100 / 100</span>        <span class="ll-check">✓</span>', progress: 82 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">seo</span>              <span class="ll-val">optimized</span>        <span class="ll-check">✓</span>', progress: 91 },
+    { html: '<span class="ll-arrow">→</span> <span class="ll-key">deploying</span>        <span class="ll-val">tessmaedia.com</span>   <span class="ll-check">↗</span>', progress: 98 },
+    { html: '<span class="ll-ready">✓ ready to launch</span>',                                                                                             progress: 100 },
+  ];
+
+  const DELAYS = [300, 420, 380, 400, 390, 420, 380, 360, 440, 0];
+
+  const termBody = document.getElementById('termBody');
+  const progEl   = document.getElementById('prog');
+  const flashEl  = document.getElementById('flash');
+  const logoEl   = document.getElementById('logo');
+
+  // Pre-render ALL lines invisible — terminal has its full height from frame 1
+  const lineEls = STEPS.map((step, i) => {
+    const span = document.createElement('span');
+    span.className = 'line';
+    span.innerHTML = step.html;
+    // Add cursor to last line
+    if (i === STEPS.length - 1) {
+      const cur = document.createElement('span');
+      cur.className = 'cursor';
+      cur.id = 'cursor';
+      span.appendChild(cur);
+    }
+    termBody.appendChild(span);
+    return span;
+  });
+
+  function reset() {
+    lineEls.forEach(el => el.classList.remove('show'));
+    const cur = document.getElementById('cursor');
+    if (cur) cur.classList.remove('show');
+    progEl.style.transition = 'none';
+    progEl.style.width = '0%';
+    flashEl.classList.remove('show');
+    logoEl.classList.remove('show');
+    // Re-enable transition after reset
+    requestAnimationFrame(() => {
+      progEl.style.transition = 'width 0.32s cubic-bezier(0.4,0,0.2,1)';
+    });
+  }
+
+  function runSequence() {
+    reset();
+    setTimeout(() => logoEl.classList.add('show'), 300);
+
+    let cumDelay = 500;
+    STEPS.forEach((step, idx) => {
+      cumDelay += idx === 0 ? DELAYS[0] : DELAYS[idx - 1];
+      const t = cumDelay;
+      setTimeout(() => {
+        lineEls[idx].classList.add('show');
+        progEl.style.width = step.progress + '%';
+
+        if (idx === STEPS.length - 1) {
+          const cur = document.getElementById('cursor');
+          if (cur) cur.classList.add('show');
+          setTimeout(() => {
+            flashEl.classList.add('show');
+            setTimeout(() => flashEl.classList.remove('show'), 700);
+          }, 350);
+          setTimeout(() => runSequence(), 2800);
+        }
+      }, t);
+    });
+  }
+
+  runSequence();
+</script>
+</body>
+</html>

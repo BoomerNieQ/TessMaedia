@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ready.so)",
+      "WebFetch(domain:pierrelouis.webflow.io)"
+    ]
+  }
+}
