@@ -44,6 +44,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`TessMaedia draait op http://localhost:${port}`);
+server.listen(port, '0.0.0.0', () => {
+  console.log(`TessMaedia draait op http://0.0.0.0:${port}`);
 });
