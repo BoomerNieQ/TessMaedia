@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "dev": "node server.js",
     "record": "node record-intro.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "puppeteer": "^19.0.0",
     "puppeteer-screen-recorder": "^3.0.6"
   }
