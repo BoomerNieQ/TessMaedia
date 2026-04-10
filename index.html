@@ -79,7 +79,7 @@
         </div>
         <div class="loader-term-body">
           <div id="loaderLines"></div>
-          <span class="loader-term-cursor"></span>
+          <span class="loader-term-cursor" aria-hidden="true"></span>
         </div>
       </div>
       <div class="loader-progress-wrap">
@@ -88,7 +88,7 @@
     </div>
 
     <!-- ═══ CURSOR ═══ -->
-    <div class="cursor" id="cursor"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
 
     <!-- ═══ NAV ═══ -->
     <header class="nav" id="nav">
@@ -133,14 +133,14 @@
 
     <!-- ═══ HERO ═══ -->
     <section class="hero" id="top">
-      <div class="hero-noise"></div>
-      <div class="hero-glow"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
 
       <div class="hero-inner">
         <!-- Left column -->
         <div class="hero-copy">
           <p class="eyebrow">
-            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-dot" aria-hidden="true"></span>
             <span data-i18n="hero_eyebrow">Powered by Dominique Bollen · Lanaken, België</span>
           </p>
 
@@ -159,7 +159,7 @@
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary" data-mag>
               <span data-i18n="hero_btn1">Start een project</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
@@ -229,7 +229,7 @@
         </div>
       </div>
 
-      <div class="hero-scroll">
+      <div class="hero-scroll" aria-hidden="true">
         <div class="scroll-track"></div>
         <span>Scroll</span>
       </div>
@@ -242,7 +242,7 @@
 
         <!-- Sticky visual -->
         <div class="services-sticky">
-          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="svc_eyebrow">Wat we doen</span></p>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="svc_eyebrow">Wat we doen</span></p>
           <h2 class="services-heading" data-i18n-html="svc_heading">Onze<br />expertise</h2>
           <div class="services-vis" id="svcVis">
             <div class="svc-img svc-img-active" data-svc="0">
@@ -276,7 +276,7 @@
                 <li>UI/UX Design</li><li>Branding</li><li>Prototyping</li><li data-i18n="svc1_t4">Animaties</li>
               </ul>
             </div>
-            <span class="svc-arrow">→</span>
+            <span class="svc-arrow" aria-hidden="true">→</span>
           </article>
 
           <article class="svc-item" data-svc="1">
@@ -288,7 +288,7 @@
                 <li>Frontend</li><li>Backend</li><li>CMS</li><li>E-commerce</li>
               </ul>
             </div>
-            <span class="svc-arrow">→</span>
+            <span class="svc-arrow" aria-hidden="true">→</span>
           </article>
 
           <article class="svc-item" data-svc="2">
@@ -300,7 +300,7 @@
                 <li>SEO</li><li>Performance</li><li>Hosting</li><li data-i18n="svc3_t4">Onderhoud</li>
               </ul>
             </div>
-            <span class="svc-arrow">→</span>
+            <span class="svc-arrow" aria-hidden="true">→</span>
           </article>
         </div>
 
@@ -310,19 +310,47 @@
     <!-- ═══ WORK ═══ -->
     <section class="work" id="work">
       <div class="work-header">
-        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="work_eyebrow">Portfolio</span></p>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="work_eyebrow">Portfolio</span></p>
         <h2 data-i18n="work_title">Geselecteerd werk</h2>
         <p class="work-sub" data-i18n="work_sub">4 projecten momenteel in ontwikkeling — binnenkort hier te zien.</p>
       </div>
 
-      <div class="work-drag" id="workDrag">
+      <div class="work-drag" id="workDrag" role="region" aria-label="Portfolio projecten" tabindex="0">
         <div class="work-track" id="workTrack">
+
+          <!-- Live project -->
+          <article class="work-card work-card-live">
+            <div class="wc-image">
+              <div class="wc-live-bg wc-live-mindaway" aria-hidden="true">
+                <div class="wc-mini-browser">
+                  <div class="wc-mini-bar">
+                    <div class="wc-mini-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="wc-mini-url">mindaway.be</span>
+                  </div>
+                  <div class="wc-mini-screen"></div>
+                </div>
+                <div class="wc-live-indicator">
+                  <span class="wc-live-dot"></span>Live
+                </div>
+              </div>
+            </div>
+            <div class="wc-info">
+              <span class="wc-cat" data-i18n="mindaway_cat">Website</span>
+              <h3>MindAway</h3>
+              <p data-i18n="mindaway_desc">Op maat gebouwde website — ontworpen en ontwikkeld door TessMaedia.</p>
+              <a href="https://mindaway.be/" target="_blank" rel="noopener" class="wc-ext-link" data-i18n-aria="mindaway_aria" aria-label="MindAway website openen">
+                mindaway.be <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
 
           <article class="work-card work-card-soon">
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-1">
                 <span class="wc-soon-num">01</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -337,7 +365,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-2">
                 <span class="wc-soon-num">02</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -352,7 +380,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-3">
                 <span class="wc-soon-num">03</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -367,7 +395,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-4">
                 <span class="wc-soon-num">04</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -380,7 +408,7 @@
 
           <article class="work-card work-cta-card">
             <div class="work-cta-inner">
-              <span class="work-cta-star">✦</span>
+              <span class="work-cta-star" aria-hidden="true">✦</span>
               <h3 data-i18n="work_cta_h">Jouw project als eerste?</h3>
               <a href="#contact" class="btn btn-primary" data-i18n="work_cta_btn">Neem contact op</a>
             </div>
@@ -406,7 +434,7 @@
         </div>
 
         <div class="about-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="about_eyebrow">Over TessMaedia</span></p>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="about_eyebrow">Over TessMaedia</span></p>
           <h2 data-i18n-html="about_title">Gedreven door<br />detail. Gefocust<br />op impact.</h2>
           <p class="about-lead" data-i18n-html="about_lead">TessMaedia is het digitale bureau van <strong>Dominique Bollen</strong> — een ontwikkelaar en designer uit Lanaken, België die gelooft dat elk digitaal product de kans heeft om écht indruk te maken.</p>
           <p class="about-body" data-i18n="about_body">Van kleine lokale ondernemingen tot ambitieuze startups: TessMaedia bouwt producten die niet alleen mooi zijn, maar ook technisch sterk, strategisch doordacht en klaar om te groeien.</p>
@@ -414,22 +442,22 @@
           <!-- Lighthouse scores -->
           <div class="lh-scores" id="lhScores">
             <div class="lh-score">
-              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <svg viewBox="0 0 36 36" class="lh-ring" aria-hidden="true" focusable="false"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
               <span class="lh-num" data-target="100">0</span>
               <span class="lh-label">Performance</span>
             </div>
             <div class="lh-score">
-              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <svg viewBox="0 0 36 36" class="lh-ring" aria-hidden="true" focusable="false"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
               <span class="lh-num" data-target="100">0</span>
               <span class="lh-label">SEO</span>
             </div>
             <div class="lh-score">
-              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="98"/></svg>
-              <span class="lh-num" data-target="98">0</span>
+              <svg viewBox="0 0 36 36" class="lh-ring" aria-hidden="true" focusable="false"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <span class="lh-num" data-target="100">0</span>
               <span class="lh-label">Accessibility</span>
             </div>
             <div class="lh-score">
-              <svg viewBox="0 0 36 36" class="lh-ring"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
+              <svg viewBox="0 0 36 36" class="lh-ring" aria-hidden="true" focusable="false"><circle class="lh-track" cx="18" cy="18" r="15.9"/><circle class="lh-fill" cx="18" cy="18" r="15.9" data-score="100"/></svg>
               <span class="lh-num" data-target="100">0</span>
               <span class="lh-label">Best Practices</span>
             </div>
@@ -447,7 +475,7 @@
 
         <!-- Left: copy -->
         <div class="launch-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="launch_eyebrow">Hoe we werken</span></p>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="launch_eyebrow">Hoe we werken</span></p>
           <h2 data-i18n-html="launch_title">Van idee tot<br />impact.</h2>
           <div class="launch-steps">
             <div class="ls-item"><span class="ls-n">01</span><span class="ls-label" data-i18n="launch_s1">Intake & Strategie</span></div>
@@ -470,7 +498,7 @@
             <div class="lp-notch"></div>
             <div class="lp-screen">
               <!-- Live badge — appears after launch -->
-              <div class="launch-live" id="launchLive">
+              <div class="launch-live" id="launchLive" aria-hidden="true">
                 <span class="live-dot"></span>
                 <span>LIVE</span>
               </div>
@@ -522,7 +550,7 @@
     <section class="pricing" id="prijzen">
       <div class="pricing-inner">
         <div class="pricing-header">
-          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="pricing_eyebrow">Transparante prijzen</span></p>
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="pricing_eyebrow">Transparante prijzen</span></p>
           <h2 data-i18n="pricing_title">Kies je pakket</h2>
           <p class="pricing-sub" data-i18n="pricing_sub">Geen verrassingen. Duidelijke afspraken. Altijd op maat te bespreken.</p>
         </div>
@@ -591,7 +619,7 @@
     <section class="cta" id="contact">
       <div class="cta-glow"></div>
       <div class="cta-inner">
-        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="cta_eyebrow">Klaar om te starten?</span></p>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="cta_eyebrow">Klaar om te starten?</span></p>
         <h2 class="cta-title">
           <span data-i18n="cta_line1">Laten we iets</span>
           <em data-i18n="cta_em">bijzonders</em>
@@ -600,12 +628,12 @@
         <p class="cta-sub" data-i18n="cta_sub">Stuur een berichtje — we reageren binnen 24 uur.</p>
         <a href="mailto:hello@tessmaedia.com" class="btn btn-primary btn-xl" data-mag>
           <span>hello@tessmaedia.com</span>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
             <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
         <p class="cta-location">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="currentColor"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="currentColor"/></svg>
           <span data-i18n="cta_location">Lanaken, België</span>
         </p>
       </div>

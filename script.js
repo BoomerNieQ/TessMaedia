@@ -374,6 +374,11 @@ function applyLang(lang, scramble = true) {
     if (val !== undefined) el.innerHTML = val;
   });
 
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const val = T[el.dataset.i18nAria];
+    if (val !== undefined) el.setAttribute('aria-label', val);
+  });
+
   // CTA word: scramble on user-click, silent on initial restore
   const bouwen = document.getElementById('scrambleBouwen');
   if (bouwen && T.cta_bouwen) {

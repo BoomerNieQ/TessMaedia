@@ -1045,6 +1045,116 @@ h1, h2, h3 {
   color: var(--muted);
 }
 
+/* Live project card */
+.wc-live-bg {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.wc-live-mindaway {
+  background: linear-gradient(135deg, #041c14 0%, #080f0a 55%, #021810 100%);
+}
+.wc-live-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.wc-mini-browser {
+  position: relative; z-index: 1;
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+}
+.wc-mini-bar {
+  background: rgba(255,255,255,0.06);
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.wc-mini-dots {
+  display: flex; gap: 4px;
+}
+.wc-mini-dots span {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+}
+.wc-mini-url {
+  font-size: 0.66rem;
+  color: rgba(255,255,255,0.4);
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.02em;
+}
+.wc-mini-screen {
+  height: 88px;
+  background: linear-gradient(180deg, rgba(8,32,20,0.92), rgba(4,14,8,0.98));
+  position: relative;
+}
+.wc-mini-screen::after {
+  content: 'MindAway';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.13);
+}
+.wc-live-indicator {
+  position: absolute;
+  top: 12px; right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 100, 0.14);
+  border: 1px solid rgba(16, 185, 100, 0.32);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4ade80;
+}
+.wc-live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #4ade80;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.wc-ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--purple-light);
+  transition: gap 0.2s var(--ease), color 0.2s;
+}
+.work-card-live:hover .wc-ext-link {
+  gap: 8px;
+  color: var(--text);
+}
+
 .work-cta-card {
   width: 320px;
   background: linear-gradient(160deg,
