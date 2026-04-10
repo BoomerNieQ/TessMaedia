@@ -338,6 +338,46 @@ h1, h2, h3 {
 }
 
 /* ============================================================
+   Lang toggle
+   ============================================================ */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.lang-sep {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1;
+  user-select: none;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  cursor: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+.lang-btn:hover { color: var(--text); }
+.lang-btn.active {
+  color: var(--purple-light);
+  background: rgba(138, 0, 255, 0.12);
+}
+.lang-toggle-mobile {
+  margin-top: 28px;
+}
+.lang-toggle-mobile .lang-btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+
+/* ============================================================
    Mobile menu
    ============================================================ */
 .mobile-menu {
@@ -1622,7 +1662,7 @@ h1, h2, h3 {
 @media (max-width: 900px) {
   .nav { padding: 20px 28px; }
   .nav.stuck { padding: 14px 28px; }
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .lang-toggle:not(.lang-toggle-mobile) { display: none; }
   .nav-burger { display: flex; }
 
   .hero { padding: 100px 28px 80px; }

@@ -314,52 +314,91 @@ console.log('%c Gebouwd door Dominique Bollen — Lanaken, België', 'color:#C47
 console.log('%c hello@tessmaedia.com', 'color:#6ee7b7;font-size:11px;');
 
 /* ============================================================
-   "BOUWEN" scramble build effect
+   "BOUWEN" scramble build effect — initial page load
    ============================================================ */
 (function initScramble() {
   const el = document.getElementById('scrambleBouwen');
   if (!el) return;
-
-  const original = el.textContent; // "bouwen."
-  const glyphs   = 'ABCDEFGHIJKLMNOPRSTUVWXYZ<>/{}[]|#@!=';
-
-  // Wrap each char in a span
-  el.innerHTML = original.split('').map(ch =>
-    `<span class="sc-char">${ch}</span>`
-  ).join('');
-
-  const spans = Array.from(el.querySelectorAll('.sc-char'));
 
   ScrollTrigger.create({
     trigger: '#scrambleBouwen',
     start: 'top 80%',
     once: true,
     onEnter() {
-      spans.forEach((span, i) => {
-        const real    = original[i];
-        if (real === '.') return; // period stays
-        const stagger = i * 90;   // 90 ms per letter
-        const dur     = 520;      // scramble duration per letter
-        const fps     = 40;       // ms per frame
-        let   elapsed = 0;
-
-        span.classList.add('scrambling');
-        setTimeout(() => {
-          const tick = setInterval(() => {
-            elapsed += fps;
-            if (elapsed >= dur) {
-              span.textContent = real;
-              span.classList.remove('scrambling');
-              clearInterval(tick);
-            } else {
-              span.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
-            }
-          }, fps);
-        }, stagger);
-      });
+      // Read current plain text (lang-aware) then scramble
+      runScramble(el, el.textContent);
     }
   });
 })();
+
+/* ============================================================
+   Language toggle
+   ============================================================ */
+const GLYPHS = 'ABCDEFGHIJKLMNOPRSTUVWXYZ<>/{}[]|#@!=';
+
+function runScramble(el, word) {
+  el.innerHTML = word.split('').map(ch => `<span class="sc-char">${ch}</span>`).join('');
+  Array.from(el.querySelectorAll('.sc-char')).forEach((span, i) => {
+    const real = word[i];
+    if (real === '.') return;
+    let elapsed = 0;
+    span.classList.add('scrambling');
+    setTimeout(() => {
+      const tick = setInterval(() => {
+        elapsed += 40;
+        if (elapsed >= 520) {
+          span.textContent = real;
+          span.classList.remove('scrambling');
+          clearInterval(tick);
+        } else {
+          span.textContent = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+        }
+      }, 40);
+    }, i * 90);
+  });
+}
+
+function applyLang(lang, scramble = true) {
+  const T = window.TRANSLATIONS[lang];
+  if (!T) return;
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = T[el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const val = T[el.dataset.i18nHtml];
+    if (val !== undefined) el.innerHTML = val;
+  });
+
+  // CTA word: scramble on user-click, silent on initial restore
+  const bouwen = document.getElementById('scrambleBouwen');
+  if (bouwen && T.cta_bouwen) {
+    if (scramble) {
+      runScramble(bouwen, T.cta_bouwen);
+    } else {
+      bouwen.textContent = T.cta_bouwen;
+    }
+  }
+
+  // Sync all toggle buttons (desktop + mobile)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  localStorage.setItem('tm-lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang, true));
+});
+
+// Restore saved preference silently (skip if NL — that's the default)
+const _savedLang = localStorage.getItem('tm-lang');
+if (_savedLang && _savedLang !== 'nl') applyLang(_savedLang, false);
 
 /* ============================================================
    Mobile menu

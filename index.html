@@ -99,11 +99,16 @@
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
-        <a href="#prijzen">Prijzen</a>
+        <a href="#prijzen" data-i18n="nav_pricing">Prijzen</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#contact" class="nav-cta">Start een project</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="nl">NL</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-i18n="nav_cta">Start een project</a>
       <button class="nav-burger" id="navBurger" aria-label="Menu openen">
         <span></span><span></span>
       </button>
@@ -114,10 +119,15 @@
       <nav class="mobile-nav">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
-        <a href="#prijzen">Prijzen</a>
+        <a href="#prijzen" data-i18n="nav_pricing">Prijzen</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="lang-toggle lang-toggle-mobile">
+        <button class="lang-btn active" data-lang="nl">NL</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
       <p class="mobile-footer">TessMaedia · Lanaken, België</p>
     </div>
 
@@ -131,7 +141,7 @@
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="eyebrow-dot"></span>
-            Powered by Dominique Bollen · Lanaken, België
+            <span data-i18n="hero_eyebrow">Powered by Dominique Bollen · Lanaken, België</span>
           </p>
 
           <h1 class="hero-title">
@@ -141,19 +151,19 @@
             <span class="hero-line">results.</span>
           </h1>
 
-          <p class="hero-desc">
+          <p class="hero-desc" data-i18n="hero_desc">
             TessMaedia ontwerpt en bouwt premium websites —
             op maat gemaakt om uw merk op een hoger niveau te tillen.
           </p>
 
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary" data-mag>
-              <span>Start een project</span>
+              <span data-i18n="hero_btn1">Start een project</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="#work" class="btn btn-ghost" data-mag>Bekijk ons werk</a>
+            <a href="#work" class="btn btn-ghost" data-mag data-i18n="hero_btn2">Bekijk ons werk</a>
           </div>
 
           <ul class="hero-pills" aria-hidden="true">
@@ -232,8 +242,8 @@
 
         <!-- Sticky visual -->
         <div class="services-sticky">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Wat we doen</p>
-          <h2 class="services-heading">Onze<br />expertise</h2>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="svc_eyebrow">Wat we doen</span></p>
+          <h2 class="services-heading" data-i18n-html="svc_heading">Onze<br />expertise</h2>
           <div class="services-vis" id="svcVis">
             <div class="svc-img svc-img-active" data-svc="0">
               <img src="public/images/Banner 1.png" alt="Website Design" />
@@ -261,9 +271,9 @@
             <span class="svc-num">01</span>
             <div class="svc-body">
               <h3>Web Design</h3>
-              <p>Visuele concepten en UI/UX ontwerp dat uw merk perfect vertaalt naar het scherm. Premium art direction, verfijnde typografie en interfaces die luxe communiceren.</p>
+              <p data-i18n="svc1_desc">Visuele concepten en UI/UX ontwerp dat uw merk perfect vertaalt naar het scherm. Premium art direction, verfijnde typografie en interfaces die luxe communiceren.</p>
               <ul class="svc-tags">
-                <li>UI/UX Design</li><li>Branding</li><li>Prototyping</li><li>Animaties</li>
+                <li>UI/UX Design</li><li>Branding</li><li>Prototyping</li><li data-i18n="svc1_t4">Animaties</li>
               </ul>
             </div>
             <span class="svc-arrow">→</span>
@@ -273,7 +283,7 @@
             <span class="svc-num">02</span>
             <div class="svc-body">
               <h3>Web Development</h3>
-              <p>Pixel-perfect implementatie met schone, schaalbare code. Van eenvoudige landingspagina tot complexe webapplicatie — altijd snel, veilig en klaar voor groei.</p>
+              <p data-i18n="svc2_desc">Pixel-perfect implementatie met schone, schaalbare code. Van eenvoudige landingspagina tot complexe webapplicatie — altijd snel, veilig en klaar voor groei.</p>
               <ul class="svc-tags">
                 <li>Frontend</li><li>Backend</li><li>CMS</li><li>E-commerce</li>
               </ul>
@@ -285,9 +295,9 @@
             <span class="svc-num">03</span>
             <div class="svc-body">
               <h3>Launch & SEO</h3>
-              <p>Zorgvuldige lancering, technische SEO-optimalisatie en doorlopende support. Uw website performt van dag één en blijft groeien in zichtbaarheid.</p>
+              <p data-i18n="svc3_desc">Zorgvuldige lancering, technische SEO-optimalisatie en doorlopende support. Uw website performt van dag één en blijft groeien in zichtbaarheid.</p>
               <ul class="svc-tags">
-                <li>SEO</li><li>Performance</li><li>Hosting</li><li>Onderhoud</li>
+                <li>SEO</li><li>Performance</li><li>Hosting</li><li data-i18n="svc3_t4">Onderhoud</li>
               </ul>
             </div>
             <span class="svc-arrow">→</span>
@@ -300,9 +310,9 @@
     <!-- ═══ WORK ═══ -->
     <section class="work" id="work">
       <div class="work-header">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Portfolio</p>
-        <h2>Geselecteerd werk</h2>
-        <p class="work-sub">4 projecten momenteel in ontwikkeling — binnenkort hier te zien.</p>
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="work_eyebrow">Portfolio</span></p>
+        <h2 data-i18n="work_title">Geselecteerd werk</h2>
+        <p class="work-sub" data-i18n="work_sub">4 projecten momenteel in ontwikkeling — binnenkort hier te zien.</p>
       </div>
 
       <div class="work-drag" id="workDrag">
@@ -312,7 +322,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-1">
                 <span class="wc-soon-num">01</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -327,7 +337,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-2">
                 <span class="wc-soon-num">02</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -342,7 +352,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-3">
                 <span class="wc-soon-num">03</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -357,7 +367,7 @@
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-4">
                 <span class="wc-soon-num">04</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot"></span>In ontwikkeling</div>
+                <div class="wc-soon-badge"><span class="wc-soon-dot"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
               </div>
             </div>
             <div class="wc-info">
@@ -371,8 +381,8 @@
           <article class="work-card work-cta-card">
             <div class="work-cta-inner">
               <span class="work-cta-star">✦</span>
-              <h3>Jouw project als eerste?</h3>
-              <a href="#contact" class="btn btn-primary">Neem contact op</a>
+              <h3 data-i18n="work_cta_h">Jouw project als eerste?</h3>
+              <a href="#contact" class="btn btn-primary" data-i18n="work_cta_btn">Neem contact op</a>
             </div>
           </article>
 
@@ -396,10 +406,10 @@
         </div>
 
         <div class="about-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Over TessMaedia</p>
-          <h2>Gedreven door<br />detail. Gefocust<br />op impact.</h2>
-          <p class="about-lead">TessMaedia is het digitale bureau van <strong>Dominique Bollen</strong> — een ontwikkelaar en designer uit Lanaken, België die gelooft dat elk digitaal product de kans heeft om écht indruk te maken.</p>
-          <p class="about-body">Van kleine lokale ondernemingen tot ambitieuze startups: TessMaedia bouwt producten die niet alleen mooi zijn, maar ook technisch sterk, strategisch doordacht en klaar om te groeien.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="about_eyebrow">Over TessMaedia</span></p>
+          <h2 data-i18n-html="about_title">Gedreven door<br />detail. Gefocust<br />op impact.</h2>
+          <p class="about-lead" data-i18n-html="about_lead">TessMaedia is het digitale bureau van <strong>Dominique Bollen</strong> — een ontwikkelaar en designer uit Lanaken, België die gelooft dat elk digitaal product de kans heeft om écht indruk te maken.</p>
+          <p class="about-body" data-i18n="about_body">Van kleine lokale ondernemingen tot ambitieuze startups: TessMaedia bouwt producten die niet alleen mooi zijn, maar ook technisch sterk, strategisch doordacht en klaar om te groeien.</p>
 
           <!-- Lighthouse scores -->
           <div class="lh-scores" id="lhScores">
@@ -425,7 +435,7 @@
             </div>
           </div>
 
-          <a href="#contact" class="btn btn-outline" data-mag>Samenwerken? →</a>
+          <a href="#contact" class="btn btn-outline" data-mag data-i18n="about_cta">Samenwerken? →</a>
         </div>
 
       </div>
@@ -437,16 +447,16 @@
 
         <!-- Left: copy -->
         <div class="launch-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Hoe we werken</p>
-          <h2>Van idee tot<br />impact.</h2>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="launch_eyebrow">Hoe we werken</span></p>
+          <h2 data-i18n-html="launch_title">Van idee tot<br />impact.</h2>
           <div class="launch-steps">
-            <div class="ls-item"><span class="ls-n">01</span><span class="ls-label">Intake & Strategie</span></div>
+            <div class="ls-item"><span class="ls-n">01</span><span class="ls-label" data-i18n="launch_s1">Intake & Strategie</span></div>
             <div class="ls-line"></div>
-            <div class="ls-item"><span class="ls-n">02</span><span class="ls-label">Design & Prototype</span></div>
+            <div class="ls-item"><span class="ls-n">02</span><span class="ls-label" data-i18n="launch_s2">Design & Prototype</span></div>
             <div class="ls-line"></div>
-            <div class="ls-item"><span class="ls-n">03</span><span class="ls-label">Development</span></div>
+            <div class="ls-item"><span class="ls-n">03</span><span class="ls-label" data-i18n="launch_s3">Development</span></div>
             <div class="ls-line"></div>
-            <div class="ls-item ls-launch"><span class="ls-n">04</span><span class="ls-label">Launch!</span></div>
+            <div class="ls-item ls-launch"><span class="ls-n">04</span><span class="ls-label" data-i18n="launch_s4">Launch!</span></div>
           </div>
         </div>
 
@@ -512,9 +522,9 @@
     <section class="pricing" id="prijzen">
       <div class="pricing-inner">
         <div class="pricing-header">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Transparante prijzen</p>
-          <h2>Kies je pakket</h2>
-          <p class="pricing-sub">Geen verrassingen. Duidelijke afspraken. Altijd op maat te bespreken.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="pricing_eyebrow">Transparante prijzen</span></p>
+          <h2 data-i18n="pricing_title">Kies je pakket</h2>
+          <p class="pricing-sub" data-i18n="pricing_sub">Geen verrassingen. Duidelijke afspraken. Altijd op maat te bespreken.</p>
         </div>
 
         <div class="pricing-grid">
@@ -522,58 +532,58 @@
           <!-- Starter -->
           <div class="price-card">
             <div class="pc-top">
-              <span class="pc-label">Starter</span>
-              <p class="pc-desc">Perfect voor zelfstandigen die snel online willen met een mooie, professionele aanwezigheid.</p>
-              <div class="pc-price"><span class="pc-num">€800</span><span class="pc-from">excl. BTW</span></div>
+              <span class="pc-label" data-i18n="starter_label">Starter</span>
+              <p class="pc-desc" data-i18n="starter_desc">Perfect voor zelfstandigen die snel online willen met een mooie, professionele aanwezigheid.</p>
+              <div class="pc-price"><span class="pc-num">€800</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
             </div>
             <ul class="pc-features">
-              <li><span class="pc-check">✓</span>One-pager website op maat</li>
-              <li><span class="pc-check">✓</span>Mobielvriendelijk design</li>
-              <li><span class="pc-check">✓</span>1 feedbackronde</li>
-              <li><span class="pc-check">✓</span>WhatsApp / contact knop</li>
-              <li><span class="pc-check">✓</span>Domein & hosting setup</li>
+              <li><span class="pc-check">✓</span><span data-i18n="starter_f1">One-pager website op maat</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="starter_f2">Mobielvriendelijk design</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="starter_f3">1 feedbackronde</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="starter_f4">WhatsApp / contact knop</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="starter_f5">Domein & hosting setup</span></li>
             </ul>
-            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+            <a href="#contact" class="btn btn-outline pc-btn" data-i18n="pricing_btn">Offerte aanmaken →</a>
           </div>
 
           <!-- Standaard -->
           <div class="price-card">
             <div class="pc-top">
-              <span class="pc-label">Standaard</span>
-              <p class="pc-desc">Voor bedrijven die een volwaardige website willen met meerdere pagina's en meer functionaliteiten.</p>
-              <div class="pc-price"><span class="pc-num">€1.200</span><span class="pc-from">excl. BTW</span></div>
+              <span class="pc-label" data-i18n="std_label">Standaard</span>
+              <p class="pc-desc" data-i18n="std_desc">Voor bedrijven die een volwaardige website willen met meerdere pagina's en meer functionaliteiten.</p>
+              <div class="pc-price"><span class="pc-num">€1.200</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
             </div>
             <ul class="pc-features">
-              <li><span class="pc-check">✓</span>Tot 6 pagina's op maat</li>
-              <li><span class="pc-check">✓</span>Animaties & interactiviteit</li>
-              <li><span class="pc-check">✓</span>2 feedbackrondes</li>
-              <li><span class="pc-check">✓</span>Fotogalerij of portfolio</li>
-              <li><span class="pc-check">✓</span>SEO-basisoptimalisatie</li>
-              <li><span class="pc-check">✓</span>Domein & hosting setup</li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f1">Tot 6 pagina's op maat</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f2">Animaties & interactiviteit</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f3">2 feedbackrondes</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f4">Fotogalerij of portfolio</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f5">SEO-basisoptimalisatie</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="std_f6">Domein & hosting setup</span></li>
             </ul>
-            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+            <a href="#contact" class="btn btn-outline pc-btn" data-i18n="pricing_btn">Offerte aanmaken →</a>
           </div>
 
           <!-- Maatwerk -->
           <div class="price-card">
             <div class="pc-top">
-              <span class="pc-label">Maatwerk</span>
-              <p class="pc-desc">Voor complexe projecten, webshops of platformen met specifieke wensen en functionaliteiten.</p>
-              <div class="pc-price pc-price-aanvraag"><span class="pc-num pc-num-sm">Op aanvraag</span></div>
+              <span class="pc-label" data-i18n="custom_label">Maatwerk</span>
+              <p class="pc-desc" data-i18n="custom_desc">Voor complexe projecten, webshops of platformen met specifieke wensen en functionaliteiten.</p>
+              <div class="pc-price pc-price-aanvraag"><span class="pc-num pc-num-sm" data-i18n="custom_price">Op aanvraag</span></div>
             </div>
             <ul class="pc-features">
-              <li><span class="pc-check">✓</span>Volledig op maat gebouwd</li>
-              <li><span class="pc-check">✓</span>Webshop / boekingssysteem</li>
-              <li><span class="pc-check">✓</span>Onbeperkte feedbackrondes</li>
-              <li><span class="pc-check">✓</span>Integraties (CRM, API's…)</li>
-              <li><span class="pc-check">✓</span>Prioriteitssupport</li>
-              <li><span class="pc-check">✓</span>Maandelijks onderhoud mogelijk</li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f1">Volledig op maat gebouwd</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f2">Webshop / boekingssysteem</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f3">Onbeperkte feedbackrondes</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f4">Integraties (CRM, API's…)</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f5">Prioriteitssupport</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f6">Maandelijks onderhoud mogelijk</span></li>
             </ul>
-            <a href="#contact" class="btn btn-outline pc-btn">Offerte aanmaken →</a>
+            <a href="#contact" class="btn btn-outline pc-btn" data-i18n="pricing_btn">Offerte aanmaken →</a>
           </div>
 
         </div>
-        <p class="pricing-note">Alle prijzen excl. BTW. Hosting & domein apart. Op zoek naar iets specifieks? <a href="#contact">Stuur een bericht.</a></p>
+        <p class="pricing-note" data-i18n-html="pricing_note_full">Alle prijzen excl. BTW. Hosting & domein apart. Op zoek naar iets specifieks? <a href="#contact">Stuur een bericht.</a></p>
       </div>
     </section>
 
@@ -581,13 +591,13 @@
     <section class="cta" id="contact">
       <div class="cta-glow"></div>
       <div class="cta-inner">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Klaar om te starten?</p>
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="cta_eyebrow">Klaar om te starten?</span></p>
         <h2 class="cta-title">
-          <span>Laten we iets</span>
-          <em>bijzonders</em>
+          <span data-i18n="cta_line1">Laten we iets</span>
+          <em data-i18n="cta_em">bijzonders</em>
           <span id="scrambleBouwen">bouwen.</span>
         </h2>
-        <p class="cta-sub">Stuur een berichtje — we reageren binnen 24 uur.</p>
+        <p class="cta-sub" data-i18n="cta_sub">Stuur een berichtje — we reageren binnen 24 uur.</p>
         <a href="mailto:hello@tessmaedia.com" class="btn btn-primary btn-xl" data-mag>
           <span>hello@tessmaedia.com</span>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -596,7 +606,7 @@
         </a>
         <p class="cta-location">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="currentColor"/></svg>
-          Lanaken, België
+          <span data-i18n="cta_location">Lanaken, België</span>
         </p>
       </div>
     </section>
@@ -623,13 +633,14 @@
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
-        <p class="footer-copy">© 2025 TessMaedia · Powered by Dominique Bollen</p>
+        <p class="footer-copy" data-i18n="footer_copy">© 2025 TessMaedia · Powered by Dominique Bollen</p>
       </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
