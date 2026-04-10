@@ -940,7 +940,6 @@ h1, h2, h3 {
   flex-shrink: 0;
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  overflow: hidden;
   background: rgba(255,255,255,0.02);
   transition: transform 0.4s var(--ease), border-color 0.3s ease, box-shadow 0.4s ease;
 }
@@ -949,7 +948,8 @@ h1, h2, h3 {
   border-color: var(--border-hi);
   box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(138,0,255,0.1);
 }
-.wc-image { aspect-ratio: 16/10; overflow: hidden; }
+.wc-image { aspect-ratio: 16/10; overflow: hidden; border-radius: var(--r-lg) var(--r-lg) 0 0; }
+.wc-image-live { border-radius: var(--r-lg) var(--r-lg) 0 0; }
 .wc-ph {
   width: 100%; height: 100%;
   display: flex;
