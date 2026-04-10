@@ -1168,35 +1168,61 @@ h1, h2, h3 {
 }
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
 
+/* Portrait visual */
 .about-visual {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.about-photo-frame {
+.about-portrait-wrap {
+  position: relative;
   border-radius: var(--r-xl);
   overflow: hidden;
   border: 1px solid var(--border-hi);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 50px rgba(138,0,255,0.12);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 0 60px rgba(138,0,255,0.1);
+  background: #000;
 }
-.about-photo-frame img {
+.about-portrait {
   width: 100%;
   display: block;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1 / 1.1;
   object-fit: cover;
   object-position: center top;
 }
-.about-glow {
+.about-portrait-glow {
   position: absolute;
-  inset: -30px;
-  background: radial-gradient(ellipse at center, rgba(138,0,255,0.12) 0%, transparent 70%);
+  bottom: -20px; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; height: 120px;
+  background: radial-gradient(ellipse, rgba(138,0,255,0.22) 0%, transparent 70%);
   pointer-events: none;
-  z-index: -1;
 }
 
+/* Tag strip under portrait */
+.about-tag-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  letter-spacing: 0.02em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* Copy */
 .about-copy .eyebrow { margin-bottom: 22px; }
 .about-copy h2 {
   font-size: clamp(2.2rem, 4vw, 3.6rem);
@@ -1213,32 +1239,9 @@ h1, h2, h3 {
   font-size: 0.95rem;
   line-height: 1.78;
   color: var(--muted);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 40px;
-  padding: 26px;
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  background: rgba(255,255,255,0.02);
-}
-.about-stat { display: flex; flex-direction: column; gap: 6px; }
-.stat-n {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--purple-light);
-  line-height: 1;
-}
-.stat-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
+.about-body:last-of-type { margin-bottom: 36px; }
 
 /* ============================================================
    Launch section
@@ -1720,10 +1723,9 @@ h1, h2, h3 {
   .work-progress-wrap { padding: 0 28px; }
 
   .about { padding: 80px 28px; }
-  .about-inner { grid-template-columns: 1fr; gap: 48px; }
-  .about-visual { flex-direction: row; }
-  .about-logo-frame { aspect-ratio: 1; flex: 1; }
-  .about-banner-frame { flex: 1; }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-portrait { aspect-ratio: 4/3; object-position: center 15%; }
+  .about-tag-strip { flex-direction: row; flex-wrap: wrap; }
 
   .process-inner { padding: 0 28px; }
   .process-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -1740,7 +1742,6 @@ h1, h2, h3 {
 }
 
 @media (max-width: 600px) {
-  .about-stats { grid-template-columns: 1fr; gap: 14px; }
   .work-card { width: 300px; }
   .about-visual { flex-direction: column; }
   .hero-pills { display: none; }

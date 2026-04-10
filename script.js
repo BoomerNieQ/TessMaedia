@@ -192,9 +192,13 @@ gsap.from('.svc-item', {
 });
 
 // About visual
-gsap.from('.about-photo-frame', {
+gsap.from('.about-portrait-wrap', {
   y: 50, opacity: 0, duration: 1, ease: 'expo.out',
   scrollTrigger: { trigger: '.about-visual', start: 'top 80%', once: true },
+});
+gsap.from('.about-tag-strip .about-tag', {
+  y: 16, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'expo.out',
+  scrollTrigger: { trigger: '.about-tag-strip', start: 'top 88%', once: true },
 });
 
 // About copy
