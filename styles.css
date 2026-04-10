@@ -919,8 +919,9 @@ h1, h2, h3 {
 .work-sub { color: var(--muted); font-size: 1rem; }
 
 .work-drag {
-  padding: 0 56px;
+  padding: 16px 56px;
   overflow-x: auto;
+  overflow-y: visible;
   scrollbar-width: none;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
@@ -944,7 +945,6 @@ h1, h2, h3 {
   transition: transform 0.4s var(--ease), border-color 0.3s ease, box-shadow 0.4s ease;
 }
 .work-card:hover {
-  transform: translateY(-10px);
   border-color: var(--border-hi);
   box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(138,0,255,0.1);
 }
