@@ -1243,6 +1243,12 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 .about-body:last-of-type { margin-bottom: 36px; }
+.about-body-name {
+  border-left: 2px solid rgba(138,0,255,0.45);
+  padding-left: 16px;
+  color: var(--muted);
+}
+.about-body-name strong { color: var(--purple-light); }
 
 /* ============================================================
    Launch section
