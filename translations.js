@@ -26,7 +26,7 @@ window.TRANSLATIONS = {
     // Work
     work_eyebrow:   'Portfolio',
     work_title:     'Geselecteerd werk',
-    work_sub:       '1 project live · 4 in ontwikkeling — binnenkort hier te zien.',
+    work_sub:       '1 project live · 3 in ontwikkeling — binnenkort hier te zien.',
     work_soon:      'In ontwikkeling',
     work_cta_h:     'Jouw project als volgende?',
     work_cta_btn:   'Neem contact op',
@@ -124,7 +124,7 @@ window.TRANSLATIONS = {
     svc3_t4:        'Maintenance',
     work_eyebrow:   'Portfolio',
     work_title:     'Selected work',
-    work_sub:       '1 project live · 4 in development — coming soon.',
+    work_sub:       '1 project live · 3 in development — coming soon.',
     work_soon:      'In development',
     work_cta_h:     'Your project next?',
     work_cta_btn:   'Get in touch',
