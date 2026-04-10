@@ -1046,73 +1046,19 @@ h1, h2, h3 {
 }
 
 /* Live project card */
-.wc-live-bg {
+.wc-image-live {
+  position: relative;
+  overflow: hidden;
+}
+.wc-screenshot {
   width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.7s var(--ease);
+  display: block;
 }
-.wc-live-mindaway {
-  background: linear-gradient(135deg, #041c14 0%, #080f0a 55%, #021810 100%);
-}
-.wc-live-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-.wc-mini-browser {
-  position: relative; z-index: 1;
-  width: 80%;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-}
-.wc-mini-bar {
-  background: rgba(255,255,255,0.06);
-  padding: 7px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-.wc-mini-dots {
-  display: flex; gap: 4px;
-}
-.wc-mini-dots span {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: rgba(255,255,255,0.18);
-}
-.wc-mini-url {
-  font-size: 0.66rem;
-  color: rgba(255,255,255,0.4);
-  font-family: 'Manrope', sans-serif;
-  letter-spacing: 0.02em;
-}
-.wc-mini-screen {
-  height: 88px;
-  background: linear-gradient(180deg, rgba(8,32,20,0.92), rgba(4,14,8,0.98));
-  position: relative;
-}
-.wc-mini-screen::after {
-  content: 'MindAway';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.13);
+.work-card-live:hover .wc-screenshot {
+  transform: scale(1.04);
 }
 .wc-live-indicator {
   position: absolute;
@@ -1140,11 +1086,27 @@ h1, h2, h3 {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
+.wc-info-live { padding: 20px 24px 24px; }
+.wc-info-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.wc-logo {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #f5f0eb;
+  flex-shrink: 0;
+}
+.wc-info-top .wc-cat { display: block; margin-bottom: 2px; }
+.wc-info-top h3 { margin: 0; }
 .wc-ext-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-top: 14px;
+  margin-top: 12px;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--purple-light);
@@ -1538,45 +1500,6 @@ h1, h2, h3 {
   color: var(--muted);
 }
 
-/* ============================================================
-   Lighthouse scores
-   ============================================================ */
-.lh-scores {
-  display: flex; gap: 20px; flex-wrap: wrap;
-  margin: 4px 0 8px;
-}
-.lh-score {
-  display: flex; flex-direction: column;
-  align-items: center; gap: 5px;
-}
-.lh-ring {
-  width: 64px; height: 64px;
-  transform: rotate(-90deg);
-}
-.lh-track {
-  fill: none;
-  stroke: rgba(255,255,255,0.07);
-  stroke-width: 2.8;
-}
-.lh-fill {
-  fill: none;
-  stroke: var(--purple-light);
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  stroke-dasharray: 100 100;
-  stroke-dashoffset: 100;
-  transition: stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1);
-  filter: drop-shadow(0 0 4px rgba(196,120,255,0.6));
-}
-.lh-num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800; font-size: 1.3rem;
-  color: var(--purple-light); line-height: 1;
-}
-.lh-label {
-  font-size: 0.68rem; color: var(--muted);
-  text-align: center; letter-spacing: 0.03em;
-}
 
 /* ============================================================
    Border light sweep (ready.so style)

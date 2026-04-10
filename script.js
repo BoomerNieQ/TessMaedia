@@ -268,43 +268,6 @@ gsap.from('.services-sticky .eyebrow, .services-heading, .services-vis', {
   scrollTrigger: { trigger: '.services', start: 'top 78%', once: true },
 });
 
-/* ============================================================
-   Lighthouse scores counter
-   ============================================================ */
-ScrollTrigger.create({
-  trigger: '#lhScores',
-  start: 'top 82%',
-  once: true,
-  onEnter() {
-    document.querySelectorAll('.lh-score').forEach((score, i) => {
-      const numEl  = score.querySelector('.lh-num');
-      const ring   = score.querySelector('.lh-fill');
-      const target = parseInt(numEl.dataset.target);
-      const circ   = 2 * Math.PI * 15.9; // stroke circumference
-
-      setTimeout(() => {
-        // Animate ring
-        const offset = circ - (target / 100) * circ;
-        ring.style.strokeDasharray = `${circ} ${circ}`;
-        ring.style.strokeDashoffset = circ;
-        requestAnimationFrame(() => {
-          ring.style.strokeDashoffset = offset;
-        });
-
-        // Count number
-        let start = 0;
-        const dur = 1400;
-        const step = 16;
-        const inc = target / (dur / step);
-        const tick = setInterval(() => {
-          start = Math.min(start + inc, target);
-          numEl.textContent = Math.round(start);
-          if (start >= target) clearInterval(tick);
-        }, step);
-      }, i * 120);
-    });
-  }
-});
 
 /* ============================================================
    Console.log easter egg
