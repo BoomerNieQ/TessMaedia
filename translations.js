@@ -32,6 +32,7 @@ window.TRANSLATIONS = {
     work_cta_btn:   'Neem contact op',
     mindaway_cat:   'Website',
     mindaway_desc:  'Massage therapeute Sofie Willems — een rustige, sfeervolle website die rust en vertrouwen uitstraalt.',
+    mindaway_pkg:   'Standaard pakket',
     mindaway_aria:  'MindAway website openen',
     // About
     about_eyebrow:  'Over TessMaedia',
@@ -131,6 +132,7 @@ window.TRANSLATIONS = {
     work_cta_btn:   'Get in touch',
     mindaway_cat:   'Website',
     mindaway_desc:  'Massage therapist Sofie Willems — a calm, atmospheric website that radiates peace and trust.',
+    mindaway_pkg:   'Standard package',
     mindaway_aria:  'Open MindAway website',
     about_eyebrow:  'About TessMaedia',
     about_title:    'Driven by<br />passion. Focused<br />on results.',

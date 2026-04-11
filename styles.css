@@ -1106,11 +1106,27 @@ h1, h2, h3 {
 }
 .wc-info-top .wc-cat { display: block; margin-bottom: 2px; }
 .wc-info-top h3 { margin: 0; }
+.wc-package-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+.wc-package-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+  background: rgba(138,0,255,0.1);
+  border: 1px solid rgba(138,0,255,0.25);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
 .wc-ext-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-top: 12px;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--purple-light);
