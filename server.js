@@ -15,6 +15,8 @@ const mimeTypes = {
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
   ".ico": "image/x-icon",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
 };
 
 const server = http.createServer((req, res) => {
