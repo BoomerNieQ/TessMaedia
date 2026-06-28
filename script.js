@@ -17,6 +17,12 @@ window.addEventListener('load', () => {
   const linesEl   = document.getElementById('loaderLines');
   const progressEl = document.getElementById('loaderProgressFill');
 
+  if (sessionStorage.getItem('loaderSeen')) {
+    loader.style.display = 'none';
+    animateHero();
+    return;
+  }
+
   const steps = [
     { html: '<span class="ll-prompt">$</span> <span class="ll-ready">tessmaedia.com — building...</span>',                                               progress: 8,  delay: 300 },
     { html: '<span class="ll-arrow">→</span> <span class="ll-key">reading design files</span>                    <span class="ll-check">✓</span>',        progress: 20, delay: 420 },
@@ -34,6 +40,7 @@ window.addEventListener('load', () => {
   function showNextStep() {
     if (i >= steps.length) {
       setTimeout(() => {
+        sessionStorage.setItem('loaderSeen', '1');
         animateHero();
         gsap.to(loader, {
           yPercent: -100,
