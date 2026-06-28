@@ -32,7 +32,7 @@
     <meta name="author" content="Dominique Bollen" />
     <meta name="geo.region" content="BE-VLI" />
     <meta name="geo.placename" content="Lanaken, België" />
-    <meta name="keywords" content="website bouwen, webdesign Lanaken, webdesign België, premium website, website op maat, SEO, webdeveloper België" />
+    <meta name="keywords" content="website bouwen, webdesign Lanaken, webdesign België, website op maat, webdeveloper België, landingspagina" />
 
     <!-- Structured data — LocalBusiness -->
     <script type="application/ld+json">
@@ -52,7 +52,7 @@
         "addressCountry": "BE"
       },
       "areaServed": "Belgium",
-      "serviceType": ["Webdesign", "Webdevelopment", "SEO"],
+      "serviceType": ["Webdesign", "Webdevelopment"],
       "email": "hello@tessmaedia.com",
       "sameAs": [
         "https://github.com/BoomerNieQ"
@@ -168,7 +168,7 @@
           <ul class="hero-pills" aria-hidden="true">
             <li>Web Design</li>
             <li>Development</li>
-            <li>SEO</li>
+            <li>Responsive</li>
             <li>Lanaken, BE</li>
           </ul>
         </div>
@@ -258,7 +258,7 @@
               <div class="svc-ph svc-ph-3">
                 <span class="svc-ph-num">03</span>
                 <span class="svc-ph-icon">🚀</span>
-                <span class="svc-ph-label">Launch & SEO</span>
+                <span class="svc-ph-label">Launch & Oplevering</span>
               </div>
             </div>
           </div>
@@ -282,9 +282,9 @@
             <span class="svc-num">02</span>
             <div class="svc-body">
               <h3>Web Development</h3>
-              <p data-i18n="svc2_desc">Pixel-perfect implementatie met schone, schaalbare code. Van eenvoudige landingspagina tot complexe webapplicatie — altijd snel, veilig en klaar voor groei.</p>
+              <p data-i18n="svc2_desc">Pixel-perfect implementatie met schone, schaalbare code. Van eenvoudige landingspagina tot uitgebreide website — altijd snel, veilig en mobielvriendelijk.</p>
               <ul class="svc-tags">
-                <li>Frontend</li><li>Backend</li><li>Next.js</li><li>E-commerce</li>
+                <li>Frontend</li><li>HTML/CSS/JS</li><li>Performance</li><li>Responsive</li>
               </ul>
             </div>
             <span class="svc-arrow" aria-hidden="true">→</span>
@@ -293,10 +293,10 @@
           <article class="svc-item" data-svc="2">
             <span class="svc-num">03</span>
             <div class="svc-body">
-              <h3>Launch & SEO</h3>
-              <p data-i18n="svc3_desc">Zorgvuldige lancering, technische SEO-optimalisatie en doorlopende support. Uw website performt van dag één en blijft groeien in zichtbaarheid.</p>
+              <h3>Launch & Oplevering</h3>
+              <p data-i18n="svc3_desc">Zorgvuldige lancering met technische basisoptimalisatie en hosting setup. Uw website staat snel online, laadt razendsnel en ziet er op elk scherm perfect uit.</p>
               <ul class="svc-tags">
-                <li>SEO</li><li>Performance</li><li>Hosting</li><li data-i18n="svc3_t4">Onderhoud</li>
+                <li>Hosting</li><li>Domein</li><li>Snelheid</li><li data-i18n="svc3_t4">Onderhoud</li>
               </ul>
             </div>
             <span class="svc-arrow" aria-hidden="true">→</span>
@@ -311,7 +311,7 @@
       <div class="work-header">
         <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="work_eyebrow">Portfolio</span></p>
         <h2 data-i18n="work_title">Geselecteerd werk</h2>
-        <p class="work-sub" data-i18n="work_sub">1 project live · 3 in ontwikkeling — binnenkort hier te zien.</p>
+        <p class="work-sub" data-i18n="work_sub">2 projecten live · 1 in beta · 1 in ontwikkeling — binnenkort hier te zien.</p>
       </div>
 
       <div class="work-drag" id="workDrag" role="region" aria-label="Portfolio projecten" tabindex="0">
@@ -343,36 +343,48 @@
             </div>
           </article>
 
-          <article class="work-card work-card-soon">
-            <div class="wc-image">
-              <div class="wc-soon-bg wc-soon-2">
-                <span class="wc-soon-num">02</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+          <!-- Live project: Perform & Relax -->
+          <article class="work-card work-card-live">
+            <div class="wc-image wc-image-live">
+              <img src="public/images/screenshot performrelax.png" alt="Perform & Relax website screenshot" class="wc-screenshot" />
+              <div class="wc-live-indicator" aria-hidden="true">
+                <span class="wc-live-dot"></span>Live
               </div>
             </div>
-            <div class="wc-info">
-              <span class="wc-cat">Website</span>
-              <div class="wc-redact wc-redact-title"></div>
-              <div class="wc-redact wc-redact-body"></div>
-              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+            <div class="wc-info wc-info-live">
+              <div class="wc-info-top">
+                <img src="public/images/performrelax.jpg" alt="Perform & Relax logo" class="wc-logo" />
+                <div>
+                  <span class="wc-cat" data-i18n="performrelax_cat">Website</span>
+                  <h3>Perform & Relax</h3>
+                </div>
+              </div>
+              <p data-i18n="performrelax_desc">Coaching voor prestaties en ontspanning — een stijlvolle, krachtige website die de essentie van het merk perfect weergeeft.</p>
+              <div class="wc-package-row">
+                <span class="wc-package-badge" data-i18n="performrelax_pkg">Standaard pakket</span>
+                <a href="https://performrelax.nl/" target="_blank" rel="noopener" class="wc-ext-link" data-i18n-aria="performrelax_aria" aria-label="Perform & Relax website openen">
+                  performrelax.nl <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
           </article>
 
+          <!-- Beta: Challenge Time -->
           <article class="work-card work-card-soon">
             <div class="wc-image">
-              <div class="wc-soon-bg wc-soon-3">
-                <span class="wc-soon-num">03</span>
-                <div class="wc-soon-badge"><span class="wc-soon-dot" aria-hidden="true"></span><span data-i18n="work_soon">In ontwikkeling</span></div>
+              <div class="wc-soon-bg wc-ct-bg">
+                <img src="public/images/challengenights.png" alt="Challenge Time logo" class="wc-ct-logo" />
+                <div class="wc-beta-badge"><span class="wc-beta-dot" aria-hidden="true"></span><span data-i18n="work_beta">Beta testing</span></div>
               </div>
             </div>
             <div class="wc-info">
-              <span class="wc-cat">Website</span>
-              <div class="wc-redact wc-redact-title"></div>
-              <div class="wc-redact wc-redact-body"></div>
-              <div class="wc-redact wc-redact-body wc-redact-short"></div>
+              <span class="wc-cat" data-i18n="ct_cat">Web App</span>
+              <h3>Challenge Time</h3>
+              <p data-i18n="ct_desc">Een interactief challenge platform — spelers nemen het tegen elkaar op in live spelrondes.</p>
             </div>
           </article>
 
+          <!-- Soon -->
           <article class="work-card work-card-soon">
             <div class="wc-image">
               <div class="wc-soon-bg wc-soon-4">
@@ -523,12 +535,11 @@
         <div class="pricing-grid">
 
           <!-- Starter -->
-          <!-- Starter -->
           <div class="price-card">
             <div class="pc-top">
               <span class="pc-label" data-i18n="starter_label">Starter</span>
               <p class="pc-desc" data-i18n="starter_desc">Ideaal voor zelfstandigen die snel en professioneel online willen — zonder overbodige extra's.</p>
-              <div class="pc-price"><span class="pc-num">€800</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
+              <div class="pc-price"><span class="pc-from" data-i18n="pricing_from">vanaf</span><span class="pc-num">€399</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
             </div>
             <ul class="pc-features">
               <li><span class="pc-check">✓</span><span data-i18n="starter_f1">One-pager tot 4 secties</span></li>
@@ -546,7 +557,7 @@
             <div class="pc-top">
               <span class="pc-label" data-i18n="std_label">Standaard</span>
               <p class="pc-desc" data-i18n="std_desc">Uitgebreide website met alle essentiële features — perfect voor dienstverleners en kleine bedrijven.</p>
-              <div class="pc-price"><span class="pc-num">€1.200</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
+              <div class="pc-price"><span class="pc-from" data-i18n="pricing_from">vanaf</span><span class="pc-num">€599</span><span class="pc-from" data-i18n="pricing_excl">excl. BTW</span></div>
             </div>
             <ul class="pc-features">
               <li><span class="pc-check">✓</span><span data-i18n="std_f1">Uitgebreide one-pager of meerdere pagina's</span></li>
@@ -563,14 +574,14 @@
           <div class="price-card">
             <div class="pc-top">
               <span class="pc-label" data-i18n="custom_label">Maatwerk</span>
-              <p class="pc-desc" data-i18n="custom_desc">Voor complexe projecten met een webshop, boekingssysteem of specifieke integraties.</p>
+              <p class="pc-desc" data-i18n="custom_desc">Specifieke wensen die buiten een standaardpakket vallen? We bekijken samen wat haalbaar is.</p>
               <div class="pc-price pc-price-aanvraag"><span class="pc-num pc-num-sm" data-i18n="custom_price">Op aanvraag</span></div>
             </div>
             <ul class="pc-features">
               <li><span class="pc-check">✓</span><span data-i18n="custom_f1">Alles uit Standaard</span></li>
-              <li><span class="pc-check">✓</span><span data-i18n="custom_f2">Webshop of reserveringssysteem</span></li>
-              <li><span class="pc-check">✓</span><span data-i18n="custom_f3">Admin dashboard op maat</span></li>
-              <li><span class="pc-check">✓</span><span data-i18n="custom_f4">API & tool-integraties</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f2">Meertalige website</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f3">Formulieren & integraties op maat</span></li>
+              <li><span class="pc-check">✓</span><span data-i18n="custom_f4">Animaties & interactieve elementen</span></li>
               <li><span class="pc-check">✓</span><span data-i18n="custom_f5">Onbeperkte feedbackrondes</span></li>
               <li><span class="pc-check">✓</span><span data-i18n="custom_f6">Prioriteitssupport & onderhoud</span></li>
             </ul>

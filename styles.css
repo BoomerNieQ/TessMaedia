@@ -994,6 +994,30 @@ h1, h2, h3 {
 .wc-soon-2 { background: linear-gradient(135deg, #060e1e 0%, #080610 100%); }
 .wc-soon-3 { background: linear-gradient(135deg, #0a0820 0%, #050510 100%); }
 .wc-soon-4 { background: linear-gradient(135deg, #130618 0%, #080610 100%); }
+.wc-ct-bg  { background: linear-gradient(135deg, #0d0318 0%, #1a0440 50%, #080210 100%); align-items: center; justify-content: center; gap: 18px; }
+.wc-ct-logo {
+  position: relative; z-index: 1;
+  width: 140px; height: 140px;
+  object-fit: contain;
+  border-radius: 18px;
+  filter: drop-shadow(0 0 24px rgba(138,0,255,0.5));
+}
+.wc-beta-badge {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.35);
+  color: #fbbf24;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.wc-beta-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #fbbf24;
+  animation: livePulse 1.4s ease-in-out infinite;
+}
 .wc-soon-num {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; font-size: 5rem; line-height: 1;
