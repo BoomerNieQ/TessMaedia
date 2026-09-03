@@ -375,9 +375,10 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang, true));
 });
 
-// Restore saved preference silently (skip if NL — that's the default)
-const _savedLang = localStorage.getItem('tm-lang');
-if (_savedLang && _savedLang !== 'nl') applyLang(_savedLang, false);
+// Apply saved preference (or NL default) silently on load —
+// translations.js is the single source of truth, HTML text is just a no-JS fallback.
+const _savedLang = localStorage.getItem('tm-lang') || 'nl';
+applyLang(_savedLang, false);
 
 /* ============================================================
    Mobile menu
