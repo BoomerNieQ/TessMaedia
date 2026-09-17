@@ -1582,6 +1582,17 @@ h1, h2, h3 {
   color: var(--muted);
 }
 
+.footer-regions {
+  max-width: 1400px;
+  margin: 18px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+.footer-regions a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.footer-regions a:hover { color: var(--purple-light); }
+
 
 /* ============================================================
    Card hover glow

@@ -7,7 +7,7 @@ window.TRANSLATIONS = {
     nav_pricing:    'Prijzen',
     nav_cta:        'Start een project',
     // Hero
-    hero_eyebrow:   'Powered by Dominique Bollen · Lanaken, België',
+    hero_eyebrow:   'Website laten maken in Lanaken & Limburg — door Dominique Bollen',
     hero_line1:     'Jouw website',
     hero_line2:     'live — terwijl',
     hero_line3:     'anderen nog',
@@ -128,7 +128,7 @@ window.TRANSLATIONS = {
   en: {
     nav_pricing:    'Pricing',
     nav_cta:        'Start a project',
-    hero_eyebrow:   'Powered by Dominique Bollen · Lanaken, Belgium',
+    hero_eyebrow:   'Web design in Lanaken & Limburg — by Dominique Bollen',
     hero_line1:     'Your website',
     hero_line2:     'live — while',
     hero_line3:     'others are',
